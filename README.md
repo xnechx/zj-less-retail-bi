@@ -233,7 +233,3 @@ To evaluate branches fairly regardless of temporary closures or renovation days,
 
 ---
 
-<div align="center">
-  <p><b>Designed & Engineered for Enterprise Retail BI Excellence</b></p>
-  <p>© 2026 ZJ LESS BI Analytics Team • Built with Google BigQuery & Looker Studio</p>
-</div>
