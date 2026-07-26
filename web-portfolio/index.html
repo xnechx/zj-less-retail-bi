@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZJ LESS Sales Report - Pitch Deck Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true, 
+            theme: 'dark',
+            securityLevel: 'loose',
+            fontFamily: 'Kanit, Inter, sans-serif'
+        });
+    </script>
+</head>
+<body>
+
+    <div class="deck-container">
+
+        <!-- SLIDE 1: COVER DECK (WITH AUTO-SCROLLING DASHBOARD CAROUSEL ⭐) -->
+        <section class="slide-card">
+            <div class="slide-header-bar" style="background: #e6b800; color: #121212; border: none;">
+                <span>PORTFOLIO PRESENTATION DECK</span>
+                <span class="slide-num">SLIDE 01 / 05</span>
+            </div>
+            <div class="slide-cover">
+                <div class="cover-text">
+                    <span class="tag">Business Intelligence Project</span>
+                    <h1>ZJ LESS<br>SALES REPORT</h1>
+                    <p>ระบบคลังข้อมูลบน Google BigQuery และ Dashboard วิเคราะห์กลยุทธ์ค้าปลีก 12 สาขา พร้อมระบบชี้เป้าเพิ่มยอดขาย "Missing Item Alert"</p>
+                    <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap;">
+                        <a href="https://datastudio.google.com/reporting/22b70fff-c855-44b9-9f39-fdda4812c149" target="_blank" style="text-decoration: none; font-weight: 700; background: #121212; color: #ffcc00; padding: 10px 22px; border-radius: 8px; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: transform 0.2s;">🚀 เปิดดู Looker Studio ของจริง ↗</a>
+                        <span style="font-weight: 700; border: 2px solid #121212; padding: 8px 18px; border-radius: 8px;">BigQuery SQL</span>
+                        <a href="https://github.com/xnechx/zj-less-retail-bi" target="_blank" style="text-decoration: none; font-weight: 700; background: #24292e; color: white; padding: 10px 22px; border-radius: 8px; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: transform 0.2s;">
+                            <svg height="18" viewBox="0 0 16 16" width="18" fill="white" style="vertical-align: middle;"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                            GitHub Code ↗
+                        </a>
+                    </div>
+                </div>
+
+                <!-- RETRO 90S CRT MONITOR DASHBOARD CAROUSEL 🖥️ -->
+                <div class="crt-monitor">
+                    <!-- Recessed Bezel with curved tube screen -->
+                    <div class="crt-bezel">
+                        <div class="crt-screen-overlay"></div>
+                        <div class="carousel-viewport">
+                            <!-- Slide 1: Overview -->
+                            <div class="carousel-slide active">
+                                <img src="slide_1.png" alt="ZJ LESS Overview Dashboard">
+                            </div>
+
+                            <!-- Slide 2: Product Overview -->
+                            <div class="carousel-slide">
+                                <img src="slide_2.png" alt="Product Overview & Category Drill-down">
+                            </div>
+
+                            <!-- Slide 3: YoY Growth -->
+                            <div class="carousel-slide">
+                                <img src="slide_3.png" alt="Compared Year over Year Growth Engine">
+                            </div>
+
+                            <!-- Slide 4: Missing Item Alert -->
+                            <div class="carousel-slide">
+                                <img src="slide_4.png" alt="Missing Item Monthly Alert">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Retro Bottom Control Panel -->
+                    <div class="crt-control-panel">
+                        <div class="crt-brand">
+                            <span>ZJ-LESS // CRT 95</span>
+                            <span class="power-led" title="System Power ON 🟢"></span>
+                        </div>
+
+                        <div class="crt-controls">
+                            <button class="retro-btn" onclick="prevCarouselSlide()">◄ PREV</button>
+                            <div class="carousel-indicators">
+                                <span class="indicator-dot active" onclick="jumpCarouselSlide(0)"></span>
+                                <span class="indicator-dot" onclick="jumpCarouselSlide(1)"></span>
+                                <span class="indicator-dot" onclick="jumpCarouselSlide(2)"></span>
+                                <span class="indicator-dot" onclick="jumpCarouselSlide(3)"></span>
+                            </div>
+                            <button class="retro-btn" onclick="nextCarouselSlide()">NEXT ►</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 2: KPI DICTIONARY & FORMULAS (CLEAN ENGLISH FORMULAS ⭐) -->
+        <section class="slide-card">
+            <div class="slide-header-bar" style="background: #18181b; color: #ffcc00; border: none;">
+                <span>01. RETAIL KPI DICTIONARY & FORMULATION LOGIC</span>
+                <span class="slide-num">SLIDE 02 / 05</span>
+            </div>
+            <div style="padding: 50px 60px;">
+                <span style="color: #ca8a04; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">Normalized Retail Performance Methodology</span>
+                <h2 class="slide-title" style="margin-top: 4px;">คู่มือตัวชี้วัดค้าปลีกและสูตรคำนวณ</h2>
+                <p class="slide-subtitle" style="margin-bottom: 30px;">
+                    ในธุรกิจรีเทล เราไม่สามารถเปรียบเทียบยอดขายรวมระหว่างสาขาใหญ่ที่เปิดทุกวันกับสาขาเล็กที่เปิดไม่เต็มเดือนได้โดยตรง รายงานนี้จึงใช้ตัวชี้วัดมาตรฐาน <b>"Per Store Day (PSD)"</b> โดยมีหัวใจสำคัญคือ <b>ตัวหาร (Denominator) จะต้องใช้ "ผลรวมจำนวนวันที่ร้านเปิดขายจริงรวมกันทุกร้าน" (Total Store Operating Days)</b> ไม่ใช่การเอาสาขามาคูณวันตรงๆ เพื่อความแม่นยำสูงสุดตามจริง:
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                    <!-- BPSD -->
+                    <div style="background: #f4f5f7; padding: 22px; border-radius: 12px; border-left: 5px solid #ffcc00;">
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <strong style="font-size: 1.4rem; color: #121212; font-family: 'Space Grotesk', sans-serif;">BPSD</strong>
+                            <span style="font-size: 0.8rem; background: #121212; color: #ffcc00; padding: 2px 8px; border-radius: 4px;">Baht / Store / Day</span>
+                        </div>
+                        <span style="font-size: 0.95rem; font-weight: 600; color: #1e293b; display: block; margin: 8px 0 12px;">ยอดขายเฉลี่ยต่อร้านต่อวัน (บาท)</span>
+                        <code style="display: block; background: #e2e8f0; padding: 8px 12px; border-radius: 6px; font-size: 0.85rem; color: #1e293b; font-weight: 600;">Total Sales (Baht) / Total Store Operating Days</code>
+                    </div>
+
+                    <!-- UPSD -->
+                    <div style="background: #f4f5f7; padding: 22px; border-radius: 12px; border-left: 5px solid #10b981;">
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <strong style="font-size: 1.4rem; color: #121212; font-family: 'Space Grotesk', sans-serif;">UPSD</strong>
+                            <span style="font-size: 0.8rem; background: #10b981; color: white; padding: 2px 8px; border-radius: 4px;">Units / Store / Day</span>
+                        </div>
+                        <span style="font-size: 0.95rem; font-weight: 600; color: #1e293b; display: block; margin: 8px 0 12px;">จำนวนชิ้นที่ขายได้ต่อร้านต่อวัน</span>
+                        <code style="display: block; background: #e2e8f0; padding: 8px 12px; border-radius: 6px; font-size: 0.85rem; color: #1e293b; font-weight: 600;">Total Units Sold / Total Store Operating Days</code>
+                    </div>
+
+                    <!-- TCPSD -->
+                    <div style="background: #f4f5f7; padding: 22px; border-radius: 12px; border-left: 5px solid #6366f1;">
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <strong style="font-size: 1.4rem; color: #121212; font-family: 'Space Grotesk', sans-serif;">TCPSD</strong>
+                            <span style="font-size: 0.8rem; background: #6366f1; color: white; padding: 2px 8px; border-radius: 4px;">Ticket Count / Day</span>
+                        </div>
+                        <span style="font-size: 0.95rem; font-weight: 600; color: #1e293b; display: block; margin: 8px 0 12px;">จำนวนใบเสร็จ (บิล) ต่อร้านต่อวัน</span>
+                        <code style="display: block; background: #e2e8f0; padding: 8px 12px; border-radius: 6px; font-size: 0.85rem; color: #1e293b; font-weight: 600;">Total Transactions / Total Store Operating Days</code>
+                    </div>
+
+                    <!-- GPPSD -->
+                    <div style="background: #f4f5f7; padding: 22px; border-radius: 12px; border-left: 5px solid #3b82f6;">
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <strong style="font-size: 1.4rem; color: #121212; font-family: 'Space Grotesk', sans-serif;">GPPSD</strong>
+                            <span style="font-size: 0.8rem; background: #3b82f6; color: white; padding: 2px 8px; border-radius: 4px;">Gross Profit / Day</span>
+                        </div>
+                        <span style="font-size: 0.95rem; font-weight: 600; color: #1e293b; display: block; margin: 8px 0 12px;">กำไรขั้นต้นเฉลี่ยต่อร้านต่อวัน (บาท)</span>
+                        <code style="display: block; background: #e2e8f0; padding: 8px 12px; border-radius: 6px; font-size: 0.85rem; color: #1e293b; font-weight: 600;">Total Gross Profit (Baht) / Total Store Operating Days</code>
+                    </div>
+
+                    <!-- TA -->
+                    <div style="background: #f4f5f7; padding: 22px; border-radius: 12px; border-left: 5px solid #f97316;">
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <strong style="font-size: 1.4rem; color: #121212; font-family: 'Space Grotesk', sans-serif;">TA</strong>
+                            <span style="font-size: 0.8rem; background: #f97316; color: white; padding: 2px 8px; border-radius: 4px;">Ticket Average</span>
+                        </div>
+                        <span style="font-size: 0.95rem; font-weight: 600; color: #1e293b; display: block; margin: 8px 0 12px;">ยอดซื้อเฉลี่ยต่อ 1 ใบเสร็จ (Basket Size)</span>
+                        <code style="display: block; background: #e2e8f0; padding: 8px 12px; border-radius: 6px; font-size: 0.85rem; color: #1e293b; font-weight: 600;">Total Sales / Total Transactions (or BPSD / TCPSD)</code>
+                    </div>
+
+                    <!-- UT -->
+                    <div style="background: #f4f5f7; padding: 22px; border-radius: 12px; border-left: 5px solid #ec4899;">
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <strong style="font-size: 1.4rem; color: #121212; font-family: 'Space Grotesk', sans-serif;">UT</strong>
+                            <span style="font-size: 0.8rem; background: #ec4899; color: white; padding: 2px 8px; border-radius: 4px;">Units / Transaction</span>
+                        </div>
+                        <span style="font-size: 0.95rem; font-weight: 600; color: #1e293b; display: block; margin: 8px 0 12px;">จำนวนชิ้นสินค้าเฉลี่ยต่อ 1 ใบเสร็จ</span>
+                        <code style="display: block; background: #e2e8f0; padding: 8px 12px; border-radius: 6px; font-size: 0.85rem; color: #1e293b; font-weight: 600;">Total Units Sold / Total Transactions (or UPSD / TCPSD)</code>
+                    </div>
+
+                    <!-- %GP -->
+                    <div style="background: #f4f5f7; padding: 22px; border-radius: 12px; border-left: 5px solid #059669; grid-column: span 3;">
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <strong style="font-size: 1.4rem; color: #121212; font-family: 'Space Grotesk', sans-serif;">%GP (Gross Profit Margin) - อัตรากำไรขั้นต้น</strong>
+                            <span style="font-size: 0.8rem; background: #059669; color: white; padding: 2px 8px; border-radius: 4px;">Profit Margin %</span>
+                        </div>
+                        <span style="font-size: 0.95rem; font-weight: 600; color: #1e293b; display: block; margin: 8px 0 12px;">สัดส่วนกำไรขั้นต้นเมื่อเทียบกับยอดขายรวมทั้งหมด</span>
+                        <code style="display: block; background: #e2e8f0; padding: 8px 12px; border-radius: 6px; font-size: 0.85rem; color: #1e293b; font-weight: 600;">(Total Gross Profit / Total Sales Revenue) × 100</code>
+                    </div>
+
+                    <!-- WARNING NOTE ON TICKET COUNT METRICS -->
+                    <div style="background: #fffbeb; border: 1px solid #fef3c7; padding: 18px; border-radius: 12px; border-left: 5px solid #d97706; grid-column: span 3; text-align: left; margin-top: 10px;">
+                        <strong style="color: #b45309; display: block; margin-bottom: 6px; font-size: 0.95rem;">⚠️ ข้อควรระวังและข้อจำกัดการใช้งาน (BI Constraint Tip)</strong>
+                        <span style="font-size: 0.82rem; color: #78350f; line-height: 1.5; display: block;">
+                            ตัวชี้วัดที่เกี่ยวกับจำนวนบิล ได้แก่ <b>TCPSD, TA, UT</b> จะสามารถใช้ตัวกรอง (Filter) ได้เฉพาะข้อมูลฝั่ง <b>Store Detail</b> (เช่น รายสาขา, โซน, หรือโปรไฟล์สาขา) เท่านั้น เนื่องจากในการวิเคราะห์ทางธุรกิจจริง การดูพฤติกรรมจำนวนบิลรายสาขานั้นเพียงพอแล้ว หากต้องการให้จำนวนบิลมีความยืดหยุ่นจนสามารถกรองรายสินค้าได้ เราจำเป็นต้องนำตารางดิบระดับ POS Receipt ที่มี <b>ticket_id (หลายล้านแถว)</b> มาสแกนและทำการคำนวณแบบคำนวณสด (COUNT DISTINCT) บน Looker Studio ซึ่งกินข้อมูลมาก ระบบจะโหลดช้าลงมหาศาล และไม่คุ้มค่าทางเศรษฐศาสตร์ (Cost-Performance Trade-off)
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 3: 4 CAPABILITIES (YELLOW HEADER BLOCKS) -->
+        <section class="slide-card">
+            <div class="slide-header-bar">
+                <span>02. DASHBOARD CORE CAPABILITIES</span>
+                <span class="slide-num">SLIDE 03 / 05</span>
+            </div>
+            <div style="padding: 40px 60px 20px;">
+                <h2 class="slide-title">4 ฟีเจอร์หลักในการวิเคราะห์</h2>
+                <p class="slide-subtitle">ออกแบบฟังก์ชันการใช้งานหน้า Dashboard ให้ตอบโจทย์ทั้งผู้บริหารและทีมปฏิบัติการหน้าร้าน</p>
+            </div>
+            
+            <div class="grid-4-slides" style="padding-top: 0;">
+                <div class="pitch-box">
+                    <div class="pitch-box-header">
+                        <i data-feather="grid"></i>
+                        <span>Executive Matrix Analysis</span>
+                    </div>
+                    <div class="pitch-box-body">
+                        วิเคราะห์ยอดขายแบบไขว้มิติ (Matrix) ระหว่าง โซนพื้นที่ (East, South, BKK, Isan) กับ รูปแบบสาขา (สถานที่ท่องเที่ยว, ออฟฟิศ, ที่พักอาศัย) เพื่อเปรียบเทียบศักยภาพและหาแนวทางเพิ่มยอดขายในแต่ละกลุ่มสาขา
+                    </div>
+                </div>
+
+                <div class="pitch-box">
+                    <div class="pitch-box-header">
+                        <i data-feather="layers"></i>
+                        <span>Hierarchy Drill-Down</span>
+                    </div>
+                    <div class="pitch-box-body">
+                        เจาะลึกโครงสร้างสินค้าเป็นลำดับชั้น (Hierarchy Drill-Down) ตั้งแต่ภาพรวมระดับกลุ่มสินค้าหลัก (Group Item), หมวดหมู่ย่อย (Category) ไปจนถึงระดับรายการสินค้าแต่ละตัว เพื่อวิเคราะห์พฤติกรรมการซื้อได้อย่างตรงจุด
+                    </div>
+                </div>
+
+                <div class="pitch-box">
+                    <div class="pitch-box-header">
+                        <i data-feather="trending-up"></i>
+                        <span>YoY Growth Tracking</span>
+                    </div>
+                    <div class="pitch-box-body">
+                        เปรียบเทียบผลงานและแนวโน้มการเติบโตเทียบกับช่วงเดียวกันของปีที่ผ่านมา (YoY Growth Engine) เพื่อค้นหาทิศทางของตลาดและกลุ่มสาขาที่มีศักยภาพสูงในการเติบโต ช่วยสนับสนุนแผนการลงทุนขยายธุรกิจในอนาคต
+                    </div>
+                </div>
+
+                <div class="pitch-box" style="border-color: #ffcc00; box-shadow: 0 10px 20px rgba(255,204,0,0.15);">
+                    <div class="pitch-box-header" style="background: #121212; color: #ffcc00;">
+                        <i data-feather="star" style="background: #ffcc00; color: #121212;"></i>
+                        <span>Missing Item Alert 🔥</span>
+                    </div>
+                    <div class="pitch-box-body" style="color: #18181b; font-weight: 500;">
+                        ระบบวิเคราะห์ช่องว่างโอกาสในการเพิ่มยอดขาย (Assortment Opportunity Gap) โดยตรวจสอบสินค้าขายดีของแต่ละหมวดหมู่ที่หน้าร้านยังไม่มีจำหน่าย เพื่อประมาณการโอกาสในการสร้างรายได้เพิ่มขึ้นทันทีที่นำเข้าสินค้ามาเติม
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 4: MISSING ITEM LOGIC (WITH OPERATIONAL RATIONALE ⭐) -->
+        <section class="slide-card">
+            <div class="slide-header-bar">
+                <span>03. ASSORTMENT OPPORTUNITY GAP LOGIC</span>
+                <span class="slide-num">SLIDE 04 / 05</span>
+            </div>
+            <div class="slide-split">
+                <div class="split-left">
+                    <span style="color: #9ca3af; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: 12px;">Retail Best Practices</span>
+                    <h2>MISSING ITEM<br>ALGORITHM</h2>
+                    <p style="color: #d1d5db; font-size: 1.1rem; margin-top: 16px;">
+                        ประยุกต์ใช้หลักการปฏิบัติจริงของธุรกิจค้าปลีก (Retail Assortment Best Practices) ในการสร้าง Data Model บน BigQuery เพื่อชี้เป้าเพิ่มยอดขายให้แต่ละร้านอย่างแม่นยำ
+                    </p>
+
+                    <!-- OPERATIONAL DESIGN RATIONALE BOX -->
+                    <div style="background: #1e293b; border-left: 4px solid #ffcc00; padding: 20px; border-radius: 8px; margin-top: 30px;">
+                        <span style="color: #ffcc00; font-weight: 700; font-size: 0.9rem; display: block; margin-bottom: 6px;">💡 Operational Design Rationale</span>
+                        <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.5; margin: 0;">
+                            <b>ทำไมส่วน Missing ถึงไม่จำเป็นต้องเลือกเวลาย้อนหลัง?</b><br>
+                            เพราะในการใช้งานจริง ระบบถูกออกแบบให้รัน Pipeline อัตโนมัติใน <b>"ทุกๆ สิ้นเดือน (Monthly Batch Job)"</b> เพื่อให้ผู้จัดการสาขามุ่งเน้น Action สั่งของเข้ามาเติมทันทีแบบ <b>"เดือนต่อเดือน"</b> จึงไม่จำเป็นต้องใช้ Time-range Filter เพื่อลดความซ้ำซ้อนและสร้าง Focus ในการปฏิบัติงานจริง
+                        </p>
+                    </div>
+                </div>
+                <div class="split-right">
+                    <div class="process-step">
+                        <div class="process-icon">1</div>
+                        <div>
+                            <h4 style="font-size: 1.2rem; color: var(--black-main); margin-bottom: 4px;">Item-Level BPSD Ranking</h4>
+                            <p style="color: var(--text-muted);">คำนวณยอดขายเฉลี่ยต่อร้านต่อวัน (BPSD) ของแต่ละสินค้าจากทุกสาขา เพื่อจัดอันดับหา Top 10 สินค้าขายดีที่สุดในแต่ละ Category</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="process-icon">2</div>
+                        <div>
+                            <h4 style="font-size: 1.2rem; color: var(--black-main); margin-bottom: 4px;">Zero-Touch Condition</h4>
+                            <p style="color: var(--text-muted);">ตรวจสอบไขว้กับข้อมูลร้าน โดยสินค้า 'Missing' ต้องเข้าเงื่อนไข: <strong style="color: #dc2626;">ไม่มีทั้งยอดขาย + ไม่มีทั้งยอดสั่งซื้อ + ไม่มีสินค้าในสต็อก</strong> เพื่อความแม่นยำ</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="process-icon">3</div>
+                        <div>
+                            <h4 style="font-size: 1.2rem; color: var(--black-main); margin-bottom: 4px;">Revenue Impact Projection</h4>
+                            <p style="color: var(--text-muted);">แสดงค่า BPSD ของสินค้าตัวนั้นในรายงาน เพื่อให้ผู้จัดการร้านรู้ทันทีว่า หากนำเข้าสินค้าตัวนี้ จะช่วยสร้างรายได้เพิ่มให้ร้านเฉลี่ยวันละกี่บาท</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 5: ARCHITECTURE & DATA SCOPE (WITH SIMULATION SCOPE ⭐) -->
+        <section class="slide-card">
+            <div class="slide-header-bar" style="background: #27272a; color: #a1a1aa; border: none;">
+                <span>04. DATA ENGINEERING ARCHITECTURE & DATA SCOPE</span>
+                <span class="slide-num">SLIDE 05 / 05</span>
+            </div>
+            <div class="slide-arch">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <span style="color: #a1a1aa; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">Google BigQuery Data Model</span>
+                        <h2 style="margin-top: 4px;">DATA LINEAGE & SCHEMA</h2>
+                    </div>
+                    <div style="background: #27272a; border: 1px solid #3f3f46; padding: 12px 20px; border-radius: 10px; text-align: right;">
+                        <span style="color: #ffcc00; font-weight: 700; font-size: 0.85rem; display: block;">⏳ SIMULATED DATA SCOPE</span>
+                        <span style="color: #d1d5db; font-size: 0.85rem;">Sales: Jan 2024 - Dec 2025 (2 Years) | Inventory: Jan 2025 (Sample)</span>
+                    </div>
+                </div>
+                <p style="color: #d1d5db; max-width: 800px; margin-top: 8px;">สถาปัตยกรรมข้อมูลบน BigQuery: เก็บข้อมูลธุรกรรมดิบไว้ที่ตารางหลัก (fact_sales) แล้วประมวลผลสรุป (Aggregated Summary) เป็นตารางย่อยเพื่อเพิ่มความเร็วในการใช้งานและการทำรายงาน</p>
+
+                <div class="diagram-holder">
+                    <div class="mermaid">
+                    erDiagram
+                        store_detail ||--o{ fact_sales : ""
+                        item_detail ||--o{ fact_sales : ""
+                        store_detail ||--o{ fact_inventory : ""
+                        item_detail ||--o{ fact_inventory : ""
+                        store_detail ||--o{ sales_by_date_store : ""
+                        store_detail ||--o{ sales_by_time_range_date_store_item : ""
+                        item_detail ||--o{ sales_by_time_range_date_store_item : ""
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; text-align: left; margin-top: 25px;">
+                    <div style="background: #27272a; padding: 10px; border-radius: 8px; border-top: 3px solid #ffcc00;">
+                        <strong style="color: #ffcc00; display: block; margin-bottom: 4px; font-size: 0.8rem;">fact_sales</strong>
+                        <span style="font-size: 0.7rem; color: #a1a1aa; display: block; line-height: 1.4;">ตารางหลักเก็บข้อมูลรายบิล POS (Raw Data)</span>
+                    </div>
+                    <div style="background: #27272a; padding: 10px; border-radius: 8px; border-top: 3px solid #ffcc00;">
+                        <strong style="color: #ffcc00; display: block; margin-bottom: 4px; font-size: 0.8rem;">sales_by_time_item</strong>
+                        <span style="font-size: 0.7rem; color: #a1a1aa; display: block; line-height: 1.4;">ตารางสรุปรายวันรายสินค้า (สร้างจาก fact_sales)</span>
+                    </div>
+                    <div style="background: #27272a; padding: 10px; border-radius: 8px; border-top: 3px solid #ffcc00;">
+                        <strong style="color: #ffcc00; display: block; margin-bottom: 4px; font-size: 0.8rem;">sales_by_date_store</strong>
+                        <span style="font-size: 0.7rem; color: #a1a1aa; display: block; line-height: 1.4;">ตารางสรุปรายวันรายสาขา (สร้างจาก fact_sales)</span>
+                    </div>
+                    <div style="background: #27272a; padding: 10px; border-radius: 8px; border-top: 3px solid #ffcc00;">
+                        <strong style="color: #ffcc00; display: block; margin-bottom: 4px; font-size: 0.8rem;">fact_inventory</strong>
+                        <span style="font-size: 0.7rem; color: #a1a1aa; display: block; line-height: 1.4;">บันทึกยอดสั่งและสต็อกรายสินค้า/สาขา/วัน</span>
+                    </div>
+                    <div style="background: #27272a; padding: 10px; border-radius: 8px; border-top: 3px solid #ffcc00;">
+                        <strong style="color: #ffcc00; display: block; margin-bottom: 4px; font-size: 0.8rem;">item_detail</strong>
+                        <span style="font-size: 0.7rem; color: #a1a1aa; display: block; line-height: 1.4;">มิติสินค้า ระบุกลุ่มประเภทและราคา/ต้นทุน</span>
+                    </div>
+                    <div style="background: #27272a; padding: 10px; border-radius: 8px; border-top: 3px solid #ffcc00;">
+                        <strong style="color: #ffcc00; display: block; margin-bottom: 4px; font-size: 0.8rem;">store_detail</strong>
+                        <span style="font-size: 0.7rem; color: #a1a1aa; display: block; line-height: 1.4;">มิติศักยภาพสาขา ระบุโซน/รูปแบบ/ประวัติเปิดร้าน</span>
+                    </div>
+                </div>
+
+                <!-- OPTIMIZATION & INTEGRATION TIPS -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 25px; text-align: left;">
+                    <!-- LEFT COLUMN: DATA BLENDING -->
+                    <div style="background: #1e293b; border-left: 4px solid #ffcc00; padding: 16px; border-radius: 8px;">
+                        <span style="color: #ffcc00; font-weight: 700; font-size: 0.9rem; display: block; margin-bottom: 6px;">💡 Looker Studio Integration: Advanced Data Blending</span>
+                        <p style="color: #a1a1aa; font-size: 0.8rem; line-height: 1.5; margin: 0;">
+                            เพื่อป้องกัน <b>"ตัวหารคลาดเคลื่อน"</b> เมื่อกรองสินค้า (เช่น หากกรองเฉพาะ <b>"สินค้าชาเขียวพรีเมี่ยม"</b> ซึ่งบางสาขาขายไม่ได้ หากดึงจากตารางยอดขายรายสินค้าอย่างเดียว ตัวหารจะหดเหลือเฉพาะวันที่ของสาขาที่ขายได้ ส่งผลให้ค่าเฉลี่ย BPSD สูงเกินจริง) เราจึงใช้ <b>Data Blending</b> บน Looker Studio เพื่อเชื่อมตารางยอดขายรายสินค้า เข้ากับตารางยอดขายร้านรายวัน (ถ้าร้านมียอดขายเท่ากับว่าเปิดร้าน) ช่วยให้การคำนวณค่า BPSD ยืดหยุ่นและถูกต้อง 100% เสมอ
+                        </p>
+                    </div>
+                    <!-- RIGHT COLUMN: BIGQUERY PARTITIONING -->
+                    <div style="background: #1e293b; border-left: 4px solid #3b82f6; padding: 16px; border-radius: 8px;">
+                        <span style="color: #3b82f6; font-weight: 700; font-size: 0.9rem; display: block; margin-bottom: 6px;">⚡ BigQuery Optimization: Table Partitioning</span>
+                        <p style="color: #a1a1aa; font-size: 0.8rem; line-height: 1.5; margin: 0;">
+                            การสร้างตารางบน BigQuery เพื่อต่อเข้า Looker Studio หากมีฟิลด์ที่เป็นวันที่ (Date) **ควรทำการ Partitioning ทุกตาราง** เพื่อความประหยัดและรวดเร็ว เนื่องจากหากไม่มีการ Partition ทุกครั้งที่ Looker Studio มีการรีเฟรชหรือประมวลผล ระบบจะทำการสแกนข้อมูลทั้งตาราง (Full Table Scan) ทุกครั้ง แม้เราจะกดกรองเฉพาะช่วงวันที่หน้ารายงานแล้วก็ตาม
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        feather.replace();
+
+        // DASHBOARD CAROUSEL AUTO-SLIDER SCRIPT
+        let currentCarouselIndex = 0;
+        const carouselSlides = document.querySelectorAll('.carousel-slide');
+        const indicatorDots = document.querySelectorAll('.indicator-dot');
+
+        function updateCarouselDisplay(index) {
+            carouselSlides.forEach((s, i) => {
+                s.classList.toggle('active', i === index);
+                if (indicatorDots[i]) {
+                    indicatorDots[i].classList.toggle('active', i === index);
+                }
+            });
+            currentCarouselIndex = index;
+        }
+
+        function nextCarouselSlide() {
+            let nextIndex = (currentCarouselIndex + 1) % carouselSlides.length;
+            updateCarouselDisplay(nextIndex);
+        }
+
+        function prevCarouselSlide() {
+            let prevIndex = (currentCarouselIndex - 1 + carouselSlides.length) % carouselSlides.length;
+            updateCarouselDisplay(prevIndex);
+        }
+
+        function jumpCarouselSlide(index) {
+            updateCarouselDisplay(index);
+        }
+
+        // Auto-play every 2.5 seconds
+        let autoPlayTimer = setInterval(nextCarouselSlide, 2500);
+
+        // Pause auto-play on mouse hover for easy reading
+        const frameBox = document.querySelector('.crt-monitor');
+        if (frameBox) {
+            frameBox.addEventListener('mouseenter', () => clearInterval(autoPlayTimer));
+            frameBox.addEventListener('mouseleave', () => {
+                clearInterval(autoPlayTimer);
+                autoPlayTimer = setInterval(nextCarouselSlide, 2500);
+            });
+        }
+    </script>
+</body>
+</html>
